@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# MiruBody - 体型管理のための食事スコアリングアプリ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 現状のニーズ
+- 食事内容を“良い/悪い”の感覚ではなく、**数値（スコア）**で簡単に把握したい
+- 体型管理（減量・増量・維持）のために、毎日の食事の質を素早くチェックしたい
+- 面倒な記録や複雑なグラフではなく、その日の総合スコアを一目で確認したい
 
-## Available Scripts
+## 解決手法
+- 食事項目を「プラス（体に良い）」と「マイナス（控えたい）」に分け、各項目に**スコア（+5〜-5）**を設定
+- その日の食事で摂った（または該当した）項目を選択すると、合計点を自動集計し「今日のスコア」として表示
+- スコアの可視化により、過不足の気づき → 行動修正 → 体型管理の継続をサポート
 
-In the project directory, you can run:
+## 想定ユーザー
+- 体型・健康を気にする20代後半〜30代の男女
+- 「細かいカロリー計算は続かないが、良い/悪いのバランスを直感的に整えたい」人
 
-### `npm start`
+## MiruBody アプリの機能
+- 今日のスコア表示：円形ゲージ中央に合計点を大きく表示
+- プラス/マイナス食材の選択：クリック操作で即時反映（例：葉物サラダ +5、砂糖入りドリンク -5 など）
+- グループ別表示：
+　プラス（体に良い）
+　マイナス（控えたい）
+- 軽量・シンプルUI：スマホ/PCで見やすいレイアウト（レスポンシブ前提のスタイル）
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 名前の由来（MiruBody）
+- **Body（からだ）**を Miru（見る） → 「MiruBody」
+- まずは**“見える化”**して気づきを得ることが、体型管理の第一歩という考えから命名
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+<br><br><br><br><br><br><br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## スクリーンショット
 
-### `npm run build`
+### 1-1. 初期表示(PC)
+<p align="left">
+  <img src="/screenshots/mirubody-react-xl1.svg" width="50%" alt="MiruBody初期表示1(PC)" />
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="left">
+  <img src="/screenshots/mirubody-react-xl2.svg" width="50%" alt="MiruBody初期表示2(PC)" />
+</p>
+<br><br><br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1-2. 初期表示(SP)
+<p align="left">
+  <img src="/screenshots/mirubody-react-s1.svg" width="50%" alt="MiruBody初期表示1(SP)" />
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="left">
+  <img src="/screenshots/mirubody-react-s2.svg" width="50%" alt="MiruBody初期表示2(SP)" />
+</p>
+<br><br><br><br><br><br><br>
 
-### `npm run eject`
+### 2-1. 実際に、複数項目を選択した際の表示(PC)
+<p align="left">
+  <img src="/screenshots/mirubody-react-result-xl1.svg" width="50%" alt="実際に、複数項目を選択した際の表示1(PC)" />
+</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="left">
+  <img src="/screenshots/mirubody-react-result-xl2.svg" width="50%" alt="実際に、複数項目を選択した際の表示2(PC)" />
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br><br><br>
+### 2-2. 実際に、複数項目を選択した際の表示(SP)
+<p align="left">
+  <img src="/screenshots/mirubody-react-result-s1.svg" width="50%" alt="実際に、複数項目を選択した際の表示1(SP)" />
+</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="left">
+  <img src="/screenshots/mirubody-react-result-s2.svg" width="50%" alt="実際に、複数項目を選択した際の表示2(SP)" />
+</p>
